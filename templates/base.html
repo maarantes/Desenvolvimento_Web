@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <img class="logo" src="/static/img/logo.png">
+        <nav class="navbar_menu"></div>
+            <a class="navbar_menu_item" href="/">Home</a>
+            <a class="navbar_menu_item" href="/quem_somos" >Quem Somos</a>
+            <a class="navbar_menu_item" href="/contato">Contato</a>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <p>Todos os direitos reservados © 2023</p>
+        <p>Autor: Marco Antonio Arantes</p>
+    </footer>
+
+</body>
+
+</html>

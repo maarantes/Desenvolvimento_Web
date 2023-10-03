@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <title>Quem Somos / Ufes</title>
-</head>
+{% extends 'base.html' %}
 
-<body>
-
-    <header class="navbar">
-        <img class="logo" src="./img/logo.png">
-        <nav class="navbar_menu"></div>
-            <a class="navbar_menu_item" href="home.html">Home</a>
-            <a class="navbar_menu_item" href="" >Quem Somos</a>
-            <a class="navbar_menu_item" href="contato.html">Contato</a>
-        </nav>
-    </header>
-
+    {% block content %}
     <main>
         <hr class="divisoria">
 
@@ -45,12 +27,5 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut quaerat, facere omnis porro illum vitae unde corporis laborum sed libero blanditiis modi tenetur magni iusto rem eius explicabo itaque.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolor ducimus cum eos minima quos unde fugit accusantium magni ex inventore itaque hic nemo officiis nam aliquid nesciunt quaerat dignissimos.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste officia minus deserunt culpa error voluptatem temporibus perferendis explicabo nulla sint, veniam ipsa ea ad nam qui itaque omnis maxime.</p>
-        </main>
-    <footer>
-        <p>Todos os direitos reservados © 2023</p>
-        <p>Autor: Marco Antonio Arantes</p>
-    </footer>
-
-    </body>
-
-</html>
+    </main>
+    {% endblock %}
