@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    margin: 0 16.65%;
+}
+
+hr {
+    border: 1px solid #ababab;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -25%;
+    padding: 32px 48px;
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.36);
+    margin-bottom: 32px;
+}
+
+.navbar img {
+    width: 144px;
+}
+
+.navbar_menu {
+    display: flex;
+    font-weight: 600;
+    gap: 32px;
+}
+
+.navbar_menu_item {
+    padding: 8px;
+    color: #303030;
+}
+
+.navbar_menu_item:hover {
+    padding: 8px;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+}
+
+.active {
+    color: #4267EA;
+}
+
+/* Hero Banner */
+
+.hero_banner img {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+/* Aviso */
+
+.aviso {
+    display: flex;
+    flex-direction: column;
+}
+
+.aviso_cima {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.aviso_cima_titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #03045E;
+}
+
+.aviso_cima_fixado {
+    background-color: #EE924F;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+.botao_externo {
+    margin-top: 32px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 48px;
+    background-color: #03045E;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 256px;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+.botao_externo img {
+    width: 28px;
+}
+
+.botao_externo:hover {
+    background-color: #020348;
+}
+
+/* Área do Aluno */
+
+.area_aluno {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.area_aluno_esquerda_titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #03045E;
+    margin-bottom: 32px;
+}
+
+.area_aluno_direita img {
+    width: 200px;
+}
+
+/* Sobre */
+
+.sobre_titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #03045E;
+    margin-bottom: 32px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.card_individual {
+    background-color: #2D9071;
+    padding: 32px;
+    border-radius: 16px;
+}
+
+.card_individual_titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.card_individual_botao {
+    padding: 12px 24px;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:#2D9071;
+    cursor: pointer;
+}
+
+.card_individual_botao:hover {
+    background-color: #e3e3e3;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #00012F;
+    margin: 0 -25%;
+    padding: 32px 128px;
+    margin-top: 128px;
+}
+
+.footer_esquerda {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.footer_esquerda img {
+    width: 144px;
+}
+
+.badge {
+    margin-top: 48px;
+}
+
+.divisoria {
+    background-color: white;
+    margin: 0 96px;
+    width: 1px;
+    height: 300px;
+}
+
+.footer_direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_direita_cima {
+    display: flex;
+    flex-direction: row;
+    gap: 96px;
+    justify-content: space-between;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2D9071;
+}
+
+.direita_titulo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.newsletter {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.enviar_email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_email {
+    margin-top: 32px;
+    padding: 16px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.botao_enviar {
+    color: white;
+    font-weight: 600;
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #2D9071;
+    cursor: pointer;
+}
+
+.botao_enviar:hover {
+    background-color: #248063;
+}
