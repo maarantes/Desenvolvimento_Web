@@ -59,9 +59,57 @@ hr {
 
 /* Hero Banner */
 
-.hero_banner img {
-    width: 100%;
+.carrossel {
     margin-bottom: 32px;
+}
+
+.carrossel_wrapper {
+	position: relative;
+	margin: 0 auto;
+}
+
+.carrossel_slides {
+	display: flex;
+	aspect-ratio: auto;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+    -ms-overflow-style: none; /* Esconde o scrollbar no Edge*/
+	scrollbar-width: none; /* Esconde o scrollbar no Firefox */
+}
+
+.carrossel_slides::-webkit-scrollbar {
+	display: none; /* Esconde o scrollbar no Chrome, Safari e Opera */
+}
+
+.carrossel_slides img {
+    width: 100%;
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.carrossel_nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.carrossel_nav a {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	background-color: white;
+	opacity: 0.5;
+	transition: opacity ease 250ms;
+}
+
+.carrossel_nav a:hover {
+	opacity: 1;
 }
 
 /* Aviso */
@@ -116,22 +164,22 @@ hr {
     background-color: #020348;
 }
 
-/* Área do Aluno */
+/* Área do Aluno, usado por outras páginas */
 
-.area_aluno {
+.info_texto_imagem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.area_aluno_esquerda_titulo {
+.info_texto_imagem_titulo {
     font-size: 2rem;
     font-weight: 700;
     color: #03045E;
     margin-bottom: 32px;
 }
 
-.area_aluno_direita img {
+.info_texto_imagem_direita img {
     width: 200px;
 }
 
@@ -162,7 +210,7 @@ hr {
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
-    margin-bottom: 32px;
+    margin-bottom: 80px;
 }
 
 .card_individual_botao {
@@ -182,6 +230,8 @@ hr {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: row;
     background-color: #00012F;
     margin: 0 -25%;
@@ -192,6 +242,8 @@ footer {
 .footer_esquerda {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: white;
     gap: 12px;
     font-weight: 600;
@@ -207,9 +259,8 @@ footer {
 
 .divisoria {
     background-color: white;
-    margin: 0 96px;
     width: 1px;
-    height: 300px;
+    height: 320px;
 }
 
 .footer_direita {
@@ -221,8 +272,8 @@ footer {
 .footer_direita_cima {
     display: flex;
     flex-direction: row;
-    gap: 96px;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .navegacao {
@@ -271,3 +322,152 @@ footer {
 .botao_enviar:hover {
     background-color: #248063;
 }
+
+.redes_sociais_logos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.redes_sociais_logos img {
+    width: 36px;
+}
+
+.redes_sociais_logos img:hover {
+    cursor: pointer;
+    filter: brightness(80%)
+}
+
+.footer_direita_baixo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.8rem;
+    gap: 16px;
+}
+
+.footer_direita_baixo_azul {
+    color: #00A3FF;
+}
+
+.redirect:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Página Quem Somos */
+
+
+.hero_banner img {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.info_texto_imagem_direita_sobre_nos img {
+    width: 320px;
+    margin-left: 96px;
+}
+
+/* Cards 5 Motivos */
+
+.grid_titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #03045E;
+    margin-bottom: 64px;
+}
+
+.wrapper_centralizar {
+    display: flex;
+    justify-content: center;
+}
+
+.cards_5_motivos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 128px;
+    grid-row-gap: 48px;
+}
+    
+.motivos_div1 { grid-area: 1 / 1 / 2 / 2; }
+.motivos_div2 { grid-area: 1 / 2 / 2 / 3; }
+.motivos_div3 { grid-area: 2 / 1 / 3 / 2; }
+.motivos_div4 { grid-area: 2 / 2 / 3 / 3; }
+.motivos_div5 { grid-area: 3 / 1 / 4 / 2; }
+.motivos_div6 { grid-area: 3 / 2 / 4 / 3; }
+.motivos_div7 { grid-area: 4 / 1 / 5 / 2; }
+.motivos_div8 { grid-area: 4 / 2 / 5 / 3; }
+.motivos_div9 { grid-area: 5 / 1 / 6 / 2; }
+.motivos_div10 { grid-area: 5 / 2 / 6 / 3; }
+
+.grid_subtitulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #03045E;
+}
+
+.motivos_div1, .motivos_div4, .motivos_div5, .motivos_div8, .motivos_div9 {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+}
+
+.divisoria_diff {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+/* Cards Cursos Oferecidos */
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 128px;
+    grid-row-gap: 16px;
+}
+    
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 1 / 3 / 2; }
+.div4 { grid-area: 2 / 2 / 3 / 3; }
+.div5 { grid-area: 3 / 1 / 4 / 2; }
+.div6 { grid-area: 3 / 2 / 4 / 3; }
+
+.card {
+    width: 450px;
+}
+
+.aparecer_botao {
+    position: relative;
+    width: 450px;
+}
+
+.botao_saiba_mais {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2D9071;
+}
+
+.botao_saiba_mais img {
+    width: 24px;
+}
+
+.botao_saiba_mais:hover {
+    background-color: #248063;
+}
+

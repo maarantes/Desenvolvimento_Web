@@ -13,7 +13,7 @@
         <img src="img/Logo Unes.png">
         <nav class="navbar_menu">
             <a href="" class="navbar_menu_item active">Home</a>
-            <a href="" class="navbar_menu_item">Sobre Nós</a>
+            <a href="sobre.html" class="navbar_menu_item">Sobre Nós</a>
             <a href="" class="navbar_menu_item">Área do Aluno</a>
             <a href="" class="navbar_menu_item">Contato</a>
         </nav>
@@ -21,8 +21,19 @@
 
     <main>
 
-        <section class="hero_banner">
-            <img src="img/Hero Banner 1.png">
+        <section class="carrossel">
+            <div class="carrossel_wrapper">
+                <div class="carrossel_slides">
+                    <img id="slide_1" src="img/Hero Banner 1.png">
+                    <img id="slide_2" src="img/Hero Banner 1.png">
+                    <img id="slide_3" src="img/Hero Banner 1.png">
+                </div>
+                <div class="carrossel_nav">
+                    <a href="#slide_1"></a>
+                    <a href="#slide_2"></a>
+                    <a href="#slide_3"></a>
+                </div>
+            </div>
         </section>
 
         <section class="aviso">
@@ -42,16 +53,16 @@
 
         <hr>
 
-        <section class="area_aluno">
-            <div class="area_aluno_esquerda">
-                <p class="area_aluno_esquerda_titulo">Área do Aluno</p>
+        <section class="info_texto_imagem">
+            <div class="info_texto_imagem_esquerda">
+                <p class="info_texto_imagem_titulo">Área do Aluno</p>
                 <p>Nós usamos o sistema Boreal para administrar a Área do Aluno.</p>
                 <br>
                 <p>Clique abaixo para ser redirecionado ao site Boreal:</p>
 
                 <button class="botao_externo"> Site Boreal <img src="img/External.png"> </button>
             </div>
-            <div class="area_aluno_direita">
+            <div class="info_texto_imagem_direita">
                 <img src="/img/mulher_tablet.png">
             </div>
         </section>
@@ -91,8 +102,8 @@
             <div class="footer_direita_cima">
                 <div class="navegacao">
                     <p class="direita_titulo">Navegação</p>
-                    <p>Quem Somos</p>
-                    <p>Contato</p>
+                    <span class="redirect">Quem Somos</span>
+                    <span class="redirect">Contato</span>
                 </div>
                 <div class="newsletter">
                     <p class="direita_titulo">Receber Newsletter</p>
@@ -102,14 +113,25 @@
                         <input class="botao_enviar" type="submit">
                     </form>
                 </div>
+                <div class="redes_sociais">
+                    <p class="direita_titulo">Redes Sociais</p>
+                    <div class="redes_sociais_logos">
+                        <img src="img/logo_twitter.png">
+                        <img src="img/logo_facebook.png">
+                        <img src="img/logo_youtube.png">
+                        <img src="img/logo_instagram.png">
+                    </div>
+                </div>
+            </div>
+            <div class="footer_direita_baixo">
+                <p><strong>Endereço:</strong> Avenida dos Emancipados, 402 - Belo Horizonte, MG    •   <strong>Suporte:</strong> 
+                (12) 4002-8922</p>
+                <p class="footer_direita_baixo_azul"><span class="redirect">Termos de Uso</span>   •   <span class="redirect">Política de Privacidade</span>   •   <span class="redirect">Não venda minhas informações</span>   •   <span class="redirect">Código de Conduta</span>   •   
+                <span class="redirect">Declaração de Acessibilidade</span></p>
+                <p><strong>© 2023 UNES, LLC. </strong>Todos os direitos reservados.</p>
             </div>
         </div>
-
     </footer>
-
-
-
-
 
 </body>
 
