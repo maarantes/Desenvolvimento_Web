@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
-    <title>Home Unes</title>
+    <title>Contato Unes</title>
 </head>
 
 <body>
@@ -13,13 +13,13 @@
     <header class="navbar">
         <img class="navbar_logo" src="img/Logo Unes.png">
         <nav class="navbar_menu">
-            <a href="" class="navbar_menu_item active">Home</a>
+            <a href="home.html" class="navbar_menu_item">Home</a>
             <a href="sobre.html" class="navbar_menu_item">Sobre Nós</a>
             <div id="botao_modal_1" class="navbar_area_aluno">
                 <a id="botao_modal_2">Área do Aluno</a>
                 <img id="botao_modal_3" src="img/External.png">
             </div>
-            <a href="contato.html" class="navbar_menu_item">Contato</a>
+            <a href="" class="navbar_menu_item active">Contato</a>
         </nav>
     </header>
 
@@ -38,70 +38,69 @@
             </div>
         </div>
 
-        <section class="carrossel">
-            <div class="carrossel_wrapper">
-                <div class="carrossel_slides">
-                    <img id="slide_1" src="img/Hero Banner 1.png">
-                    <img id="slide_2" src="img/Hero Banner 1.png">
-                    <img id="slide_3" src="img/Hero Banner 1.png">
-                </div>
-                <div class="carrossel_nav">
-                    <a href="#slide_1"></a>
-                    <a href="#slide_2"></a>
-                    <a href="#slide_3"></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="aviso">
-            <div class="aviso_cima">
-                <p class="sem_margem">Venha para a UNES!</h1>
-                <p class="aviso_cima_fixado">Aviso Fixado</p>
-            </div>
-
-            <p>As incrições de nosso vestibular para o 1° Semestre de 2024 estão abertas até 28/12/2023. Venha prestar
-            a prova e fazer parte da Família UNES!</p>
-            <br>
-            <p>Clique abaixo para ser redirecionado ao formulário de inscrição:</p>
-
-            <button class="botao_externo"> Inscrição <img src="img/External.png"> </button>
-
-        </section>
-
-        <hr>
+        <header class="hero_banner">
+            <img src="img/hero_banner_contato.png">
+        </header>
 
         <section class="info_texto_imagem">
             <div class="info_texto_imagem_esquerda">
-                <h1>Área do Aluno</h1>
-                <p>Nós usamos o sistema Boreal para administrar a Área do Aluno.</p>
-                <br>
-                <p>Clique abaixo para ser redirecionado ao site Boreal:</p>
-
-                <button class="botao_externo"> Site Boreal <img src="img/External.png"> </button>
+                <p class="info_texto_imagem_titulo">Formas de Contato</p>
+                <p>Possui uma dúvida? Sendo aluno ou não, sinta-se a vontade para nos enviar uma mensagem usando o formulário abaixo. 
+                Também é possivel saciar suas dúvidas em nosso Whatsapp, ligando para a secretaria ou enviando um e-mail:</p>
             </div>
-            <div class="info_texto_imagem_direita">
-                <img src="/img/mulher_tablet.png">
+            <div class="info_texto_imagem_direita_sobre_nos">
+                <img src="/img/amigos_notebook.png">
+            </div>
+        </section>
+
+        <section class="formas_contato">
+            <div class="mini_card">
+                <img src="img/icone_zap.png">
+                <p>(12) 4002-8922</p>
+            </div>
+            <div class="mini_card">
+                <img src="img/icone_telefone.png">
+                <p>+55 (12) 1200-2400</p>
+            </div>
+            <div class="mini_card">
+                <img src="img/icone_email.png">
+                <p>secretaria@unes.com</p>
             </div>
         </section>
 
         <hr>
 
-        <section class="sobre">
-            <h1>Sobre a Universidade</h1>
-            <p>Fundada em 1944, a UNES (Universidade Nacional Emancipada e Sagaz) está no top 10 melhores universidades
-            da América Latina. Nós oferecemos 6 cursos de tecnologia atualizados. Através do método de entrada do vestibular
-            VUNES, você poderá ter a chance de ser aluno de uma das instituições mais renomadas do Sul Global.</p>
-            <br>
-            <p>Conheça mais sobre a nossa Universidade ou contate-nos:</p>
-            <div class="cards">
-                <div class="card_individual">
-                    <p class="card_individual_titulo">Sobre Nós</p>
-                    <button class="card_individual_botao">Acessar</button>
-                </div>
-                <div class="card_individual">
-                    <p class="card_individual_titulo">Contato</p>
-                    <button class="card_individual_botao">Acessar</button>
-                </div>
+        <section class="parte_formulario">
+
+            <div class="formulario_cima">
+                <h1>Formulário</h1>
+                <p>Use o formulário abaixo para mandar uma mensagem para a secretaria da universidade.</p>
+                <br>
+                <p><strong>Horário de funcionamento: </strong>Segunda a sexta, das 8h as 20h</p>
+            </div>
+
+            <div class="formulario_baixo">
+                <form class="formulario">
+                    <div class="nome_sobrenome">
+                        <div class="form_item">
+                            <label class="label_forms" for="email">Nome Completo</label>
+                            <input class="input_forms" type="text" id="nome" name="nome" placeholder="Digite aqui...">
+                        </div>
+                        <div class="form_item">
+                            <label class="label_forms" for="email">E-mail</label>
+                            <input class="input_forms" type="text" id="email" name="email" placeholder="Digite aqui...">
+                        </div>
+                    </div>
+                    <div class="assunto">
+                        <label class="label_forms" for="email">Assunto</label>
+                        <input class="input_forms" type="text" id="assunto" name="assunto" placeholder="Digite aqui...">
+                    </div>
+                    <div class="mensagem">
+                        <label class="label_forms" for="mensagem">Mensagem</label>
+                        <textarea class="resize" type="text" id="mensagem" name="mensagem" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <input class="botao_enviar" type="submit" value="Enviar">
+                </form>
             </div>
         </section>
 

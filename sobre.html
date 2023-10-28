@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
     <title>Sobre Unes</title>
 </head>
 
 <body>
     
     <header class="navbar">
-        <img src="img/Logo Unes.png">
+        <img class="navbar_logo" src="img/Logo Unes.png">
         <nav class="navbar_menu">
             <a href="home.html" class="navbar_menu_item">Home</a>
             <a href="" class="navbar_menu_item active">Sobre Nós</a>
-            <a href="" class="navbar_menu_item">Área do Aluno</a>
-            <a href="" class="navbar_menu_item">Contato</a>
+            <div id="botao_modal_1" class="navbar_area_aluno">
+                <a id="botao_modal_2">Área do Aluno</a>
+                <img id="botao_modal_3" src="img/External.png">
+            </div>
+            <a href="contato.html" class="navbar_menu_item">Contato</a>
         </nav>
     </header>
 
     <main>
+
+        <div id="modal" class="modal">
+            <div class="modal_conteudo">
+                <div class="modal_cima">
+                    <h1>Aviso:</h1>
+                    <p>Você será redirecionado ao site Boreal. Deseja prosseguir?</p>
+                </div>
+                <div class="modal_baixo">
+                    <a href="https://example.com/" target="_blank" class="modal_baixo_botao_sim">Sim</a>
+                    <button class="modal_baixo_botao_voltar">Voltar</button>
+                </div>
+            </div>
+        </div>
 
         <header class="hero_banner">
             <img src="img/hero_banner_quem_somos.png">
@@ -27,7 +44,7 @@
 
         <section class="info_texto_imagem">
             <div class="info_texto_imagem_esquerda">
-                <p class="info_texto_imagem_titulo">Introdução</p>
+                <h1>Introdução</h1>
                 <p>Administrado pelo Governo Federal, a UNES - Universidade Nacional Emancipada e Sagaz, é uma das maiores 
                 instituições de ensino superior da América Latina, reconhecido até mesmo por revistas internacionais como 
                 a Forbes. Nós oferecemos vários cursos relacionados a tecnologia atualizados para os nossos alunos, ensinados 
@@ -40,7 +57,7 @@
 
         <hr>
 
-        <p class="grid_titulo">5 Motivos para estudar com a gente</p>
+        <h1>5 Motivos para estudar com a gente</h1>
 
         <div class="wrapper_centralizar">
             <div class="cards_5_motivos">
@@ -91,7 +108,7 @@
 
         <hr class="divisoria_diff">
 
-        <p class="grid_titulo">Cursos Oferecidos</p>
+        <h1>Cursos Oferecidos</h1>
 
         <div class="wrapper_centralizar">
             <div class="parent">
@@ -144,7 +161,7 @@
                     <p>Inscreva-se abaixo para ser um dos primeiros a <br> receberem notícias pertinentes sobre a universidade</p>
                     <form class="enviar_email">
                         <input class="input_email" type="text" id="email" name="email" placeholder="Digite aqui...">
-                        <input class="botao_enviar" type="submit">
+                        <input class="botao_enviar_footer" type="submit">
                     </form>
                 </div>
                 <div class="redes_sociais">
