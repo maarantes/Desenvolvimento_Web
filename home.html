@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" async></script>
     <title>Home Unes</title>
 </head>
 
@@ -12,6 +11,14 @@
     
     <header class="navbar">
         <img class="navbar_logo" src="img/Logo Unes.png">
+        <div class="navbar_hamburguer">
+            <div class="navbar_hamburguer_linha">               
+            </div>
+            <div class="navbar_hamburguer_linha">               
+            </div>
+            <div class="navbar_hamburguer_linha">               
+            </div>
+        </div>
         <nav class="navbar_menu">
             <a href="" class="navbar_menu_item active">Home</a>
             <a href="sobre.html" class="navbar_menu_item">Sobre Nós</a>
@@ -38,19 +45,11 @@
             </div>
         </div>
 
-        <section class="carrossel">
-            <div class="carrossel_wrapper">
-                <div class="carrossel_slides">
-                    <img id="slide_1" src="img/Hero Banner 1.png">
-                    <img id="slide_2" src="img/Hero Banner 1.png">
-                    <img id="slide_3" src="img/Hero Banner 1.png">
-                </div>
-                <div class="carrossel_nav">
-                    <a href="#slide_1"></a>
-                    <a href="#slide_2"></a>
-                    <a href="#slide_3"></a>
-                </div>
-            </div>
+        <section class="hero_banner_home">
+            <picture>
+                <source media="(max-width: 768px)" srcset="img/hero_banner_mobile.png">
+                <img src="img/Hero Banner 1.png">
+            </picture>
         </section>
 
         <section class="aviso">
@@ -143,12 +142,17 @@
             <div class="footer_direita_baixo">
                 <p><strong>Endereço:</strong> Avenida dos Emancipados, 402 - Belo Horizonte, MG    •   <strong>Suporte:</strong> 
                 (12) 4002-8922</p>
-                <p class="footer_direita_baixo_azul"><span class="redirect">Termos de Uso</span>   •   <span class="redirect">Política de Privacidade</span>   •   <span class="redirect">Não venda minhas informações</span>   •   <span class="redirect">Código de Conduta</span>   •   
-                <span class="redirect">Declaração de Acessibilidade</span></p>
+                <p class="footer_direita_baixo_azul"><span class="redirect">Termos de Uso</span>   •   
+                    <span class="redirect">Política de Privacidade</span>   •   
+                    <span class="redirect">Não venda minhas informações</span>   •   
+                    <span class="redirect">Código de Conduta</span>   •   
+                    <span class="redirect">Declaração de Acessibilidade</span></p>
                 <p><strong>© 2023 UNES, LLC. </strong>Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
