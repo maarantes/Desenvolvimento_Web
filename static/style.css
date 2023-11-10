@@ -367,9 +367,20 @@ h1 {
 }
 
 .card_individual {
-    background-color: #2D9071;
+    background: rgb(36,128,99);
+    background: linear-gradient(90deg, rgba(36,128,99,1) 15%, rgba(38,167,126,1) 40%, rgba(40,195,146,1) 50%, rgba(38,167,126,1) 60%, rgba(36,128,99,1) 85%);
+    background-size: 400% 400%;
     padding: 32px;
     border-radius: 16px;
+}
+
+.card_individual:hover {
+    animation: gradient 2s ease;
+    }
+
+@keyframes gradient {
+  0% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .card_individual_titulo {

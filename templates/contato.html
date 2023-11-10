@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %} Contato | Unes {% endblock %}
+
+    {% block content %}
+
+        <header class="hero_banner">
+            <img src="/static/img/hero_banner_contato.png">
+        </header>
+
+        <section class="info_texto_imagem">
+            <div class="info_texto_imagem_esquerda">
+                <p class="info_texto_imagem_titulo">Formas de Contato</p>
+                <p>Possui uma dúvida? Sendo aluno ou não, sinta-se a vontade para nos enviar uma mensagem usando o formulário abaixo. 
+                Também é possivel sanar suas dúvidas em nosso Whatsapp, ligando para a secretaria ou enviando um e-mail:</p>
+            </div>
+            <div class="info_texto_imagem_direita_contato">
+                <img src="/static//img/amigos_notebook.png">
+            </div>
+        </section>
+
+        <section class="formas_contato">
+            <div class="mini_card">
+                <img src="/static/img/icone_zap.png">
+                <p>(12) 4002-8922</p>
+            </div>
+            <div class="mini_card">
+                <img src="/static/img/icone_telefone.png">
+                <p>+55 (12) 1200-2400</p>
+            </div>
+            <div class="mini_card">
+                <img src="/static/img/icone_email.png">
+                <p>secretaria@unes.com</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="parte_formulario">
+
+            <div class="formulario_cima">
+                <h1>Formulário</h1>
+                <p>Use o formulário abaixo para mandar uma mensagem para a secretaria da universidade.</p>
+                <br>
+                <p><strong>Horário de funcionamento: </strong>Segunda a sexta, das 8h as 20h</p>
+            </div>
+
+            <div class="formulario_baixo">
+                <form class="formulario">
+                    <div class="nome_sobrenome">
+                        <div class="form_item">
+                            <label class="label_forms nome_completo" for="email">Nome Completo</label>
+                            <label class="label_forms apenas_nome" for="email">Nome</label>
+                            <input class="input_forms" type="text" id="nome" name="nome" placeholder="Digite aqui...">
+                        </div>
+                        <div class="form_item">
+                            <label class="label_forms" for="email">E-mail</label>
+                            <input class="input_forms" type="text" id="email" name="email" placeholder="Digite aqui...">
+                        </div>
+                    </div>
+                    <div class="assunto">
+                        <label class="label_forms" for="email">Assunto</label>
+                        <input class="input_forms" type="text" id="assunto" name="assunto" placeholder="Digite aqui...">
+                    </div>
+                    <div class="mensagem">
+                        <label class="label_forms" for="mensagem">Mensagem</label>
+                        <textarea class="resize" type="text" id="mensagem" name="mensagem" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <input class="botao_enviar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+
+    {% endblock %}

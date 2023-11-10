@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    
+    <header class="navbar">
+        <img class="navbar_logo" src="/static/img/Logo Unes.png">
+        <div class="navbar_hamburguer">
+            <div class="navbar_hamburguer_linha">
+            </div>
+            <div class="navbar_hamburguer_linha">
+            </div>
+            <div class="navbar_hamburguer_linha">
+            </div>
+        </div>
+        <nav class="navbar_menu">
+            <a href="/" class="navbar_menu_item" class="navbar_menu_item" id="nav_home">Home</a>
+            <a href="/sobre" class="navbar_menu_item" id="nav_sobre">Sobre Nós</a>
+            <div id="botao_modal_1" class="navbar_area_aluno">
+                <a id="botao_modal_2">Área do Aluno</a>
+                <img id="botao_modal_3" src="/static/img/External.png">
+            </div>
+            <a href="/contato" class="navbar_menu_item" id="nav_contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="modal" class="modal">
+            <div class="modal_conteudo">
+                <div class="modal_cima">
+                    <h1>Aviso:</h1>
+                    <p>Você será redirecionado ao site Boreal. Deseja prosseguir?</p>
+                </div>
+                <div class="modal_baixo">
+                    <a href="https://example.com/" target="_blank" class="modal_baixo_botao_sim">Sim</a>
+                    <button class="modal_baixo_botao_voltar">Voltar</button>
+                </div>
+            </div>
+        </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    </main>
+
+    <footer>
+        <div class="footer_esquerda">
+            <img src="/static/img/Logo Unes Branco.png">
+            <p>Universidade Nacional <br> Emancipada e Sagaz</p>
+            <img class="badge" src="/static/img/badge_reclame_aqui.png">
+        </div>
+        <div class="divisoria">
+        </div>
+        <div class="footer_direita">
+            <div class="footer_direita_cima">
+                <div class="navegacao">
+                    <p class="direita_titulo">Navegação</p>
+                    <span class="redirect">Quem Somos</span>
+                    <span class="redirect">Contato</span>
+                </div>
+                <div class="newsletter">
+                    <p class="direita_titulo">Receber Newsletter</p>
+                    <p>Inscreva-se abaixo para ser um dos primeiros a <br> receberem notícias pertinentes sobre a universidade</p>
+                    <form class="enviar_email">
+                        <input class="input_email" type="text" id="email" name="email" placeholder="Digite aqui...">
+                        <input class="botao_enviar_footer" type="submit">
+                    </form>
+                </div>
+                <div class="redes_sociais">
+                    <p class="direita_titulo">Redes Sociais</p>
+                    <div class="redes_sociais_logos">
+                        <img src="/static/img/logo_twitter.png">
+                        <img src="/static/img/logo_facebook.png">
+                        <img src="/static/img/logo_youtube.png">
+                        <img src="/static/img/logo_instagram.png">
+                    </div>
+                </div>
+            </div>
+            <div class="footer_direita_baixo">
+                <p><strong>Endereço:</strong> Avenida dos Emancipados, 402 - Belo Horizonte, MG    •   <strong>Suporte:</strong> 
+                (12) 4002-8922</p>
+                <p class="footer_direita_baixo_azul"><span class="redirect">Termos de Uso</span>   •   
+                    <span class="redirect">Política de Privacidade</span>   •   
+                    <span class="redirect">Não venda minhas informações</span>   •   
+                    <span class="redirect">Código de Conduta</span>   •   
+                    <span class="redirect">Declaração de Acessibilidade</span></p>
+                <p><strong>© 2023 UNES, LLC. </strong>Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

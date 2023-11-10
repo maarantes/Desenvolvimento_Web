@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+
+{% block title %} Home | Unes {% endblock %}
+
+    {% block content %}
+
+        <section class="hero_banner_home">
+            <picture>
+                <source media="(max-width: 768px)" srcset="/static/img/hero_banner_mobile.png">
+                <img src="/static/img/Hero Banner 1.png">
+            </picture>
+        </section>
+
+        <section class="aviso">
+            <div class="aviso_cima">
+                <p class="sem_margem">Venha para a UNES!</h1>
+                <p class="aviso_cima_fixado">Aviso Fixado</p>
+            </div>
+
+            <p>As incrições de nosso vestibular para o 1° Semestre de 2024 estão abertas até 28/12/2023. Venha prestar
+            a prova e fazer parte da Família UNES!</p>
+            <br>
+            <p>Clique abaixo para ser redirecionado ao formulário de inscrição:</p>
+
+            <button class="botao_externo"> Inscrição <img src="/static/img/External.png"> </button>
+
+        </section>
+
+        <hr>
+
+        <section class="info_texto_imagem">
+            <div class="info_texto_imagem_esquerda">
+                <h1>Área do Aluno</h1>
+                <p>Nós usamos o sistema Boreal para administrar a Área do Aluno.</p>
+                <br>
+                <p>Clique abaixo para ser redirecionado ao site Boreal:</p>
+
+                <button class="botao_externo"> Site Boreal <img src="/static/img/External.png"> </button>
+            </div>
+            <div class="info_texto_imagem_direita">
+                <img src="/static/img/mulher_tablet.png">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="sobre">
+            <h1>Sobre a Universidade</h1>
+            <p>Fundada em 1944, a UNES (Universidade Nacional Emancipada e Sagaz) está no top 10 melhores universidades
+            da América Latina. Nós oferecemos 6 cursos de tecnologia atualizados. Através do método de entrada do vestibular
+            VUNES, você poderá ter a chance de ser aluno de uma das instituições mais renomadas do Sul Global.</p>
+            <br>
+            <p>Conheça mais sobre a nossa Universidade ou contate-nos:</p>
+            <div class="cards">
+                <div class="card_individual">
+                    <p class="card_individual_titulo">Sobre Nós</p>
+                    <button class="card_individual_botao">Acessar</button>
+                </div>
+                <div class="card_individual">
+                    <p class="card_individual_titulo">Contato</p>
+                    <button class="card_individual_botao">Acessar</button>
+                </div>
+            </div>
+        </section>
+
+    {% endblock %}
