@@ -46,11 +46,11 @@
             </div>
 
             <div class="formulario_baixo">
-                <form class="formulario">
+                <form class="formulario" action = "/formulario_post" method = "post">
                     <div class="nome_sobrenome">
                         <div class="form_item">
-                            <label class="label_forms nome_completo" for="email">Nome Completo</label>
-                            <label class="label_forms apenas_nome" for="email">Nome</label>
+                            <label class="label_forms nome_completo" for="nome">Nome Completo</label>
+                            <label class="label_forms apenas_nome" for="nome">Nome</label>
                             <input class="input_forms" type="text" id="nome" name="nome" placeholder="Digite aqui...">
                         </div>
                         <div class="form_item">
@@ -59,14 +59,22 @@
                         </div>
                     </div>
                     <div class="assunto">
-                        <label class="label_forms" for="email">Assunto</label>
+                        <label class="label_forms" for="assunto">Assunto</label>
                         <input class="input_forms" type="text" id="assunto" name="assunto" placeholder="Digite aqui...">
                     </div>
                     <div class="mensagem">
                         <label class="label_forms" for="mensagem">Mensagem</label>
                         <textarea class="resize" type="text" id="mensagem" name="mensagem" placeholder="Digite aqui..."></textarea>
                     </div>
-                    <input class="botao_enviar" type="submit" value="Enviar">
+                    <div class="enviar_e_flash">
+                        <input class="botao_enviar" type="submit" value="Enviar">
+                        {%- for category, message in get_flashed_messages(with_categories = true) %}
+                        <div id="flash" class="mensagem_flash">
+                            <img id="flash_img" src="/static/img/flash_aviso.png">
+                            <p id="flash_mensagem">{{ message }}</p>
+                        </div>
+                        {%- endfor %}
+                    </div>
                 </form>
             </div>
         </section>

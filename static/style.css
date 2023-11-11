@@ -867,10 +867,14 @@ footer {
 
 }
 
+.formulario_baixo {
+    width: 85%;
+}
+
 .form_item {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 47.5%;
 }
 
 .apenas_nome {
@@ -900,14 +904,12 @@ footer {
 .assunto {
     display: flex;
     flex-direction: column;
-    width: 85%;
     margin-bottom: 32px;
 }
 
 .mensagem {
     display: flex;
     flex-direction: column;
-    width: 85%;
     height: 200%;
 }
 
@@ -931,7 +933,6 @@ textarea:focus {
 }
 
 .botao_enviar {
-    margin-top: 32px;
     border: none;
     border-radius: 8px;
     background-color: #03045E;
@@ -947,6 +948,32 @@ textarea:focus {
     background-color: #020348;
 }
 
+.mensagem_flash {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #d4442a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+.mensagem_flash img {
+    width: 32px;
+    height: 32px;
+}
+
+.flash_verde {
+    background-color: #41a384;
+}
+
+.enviar_e_flash {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
 /* Responsividade Contato */
 
 @media only screen and (max-width: 768px) {
@@ -956,6 +983,10 @@ textarea:focus {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .formulario_baixo {
+        width: 100%;
     }
 
     .info_texto_imagem_direita_contato img {
@@ -974,11 +1005,13 @@ textarea:focus {
         align-items: center;
     }
 
-    .form_item {
-        width: 47.5%;
+    .botao_enviar {
+        display: flex;
+        justify-content: center;
+        height: 48px;
     }
 
-    .assunto, .mensagem {
-        width: 100%;
+    .mensagem_flash {
+        font-size: 0.8rem;
     }
 }

@@ -64,3 +64,17 @@ if (activePage == "/sobre") {
 if (activePage == "/contato") {
   nav_contato.classList.toggle("active");
 }
+
+if (activePage == "/formulario_post") {
+  nav_contato.classList.toggle("active");
+}
+
+
+let flash = document.getElementById("flash")
+let flash_frase = document.getElementById("flash_mensagem").innerHTML;
+const flash_img = document.getElementById("flash_img")
+
+if (flash_frase == "Mensagem enviada com sucesso!") {
+    flash.classList.add ("flash_verde");
+    flash_img.src = "/static/img/flash_sucesso.png"
+}
