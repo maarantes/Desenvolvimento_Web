@@ -51,21 +51,25 @@
                         <div class="form_item">
                             <label class="label_forms nome_completo" for="nome">Nome Completo</label>
                             <label class="label_forms apenas_nome" for="nome">Nome</label>
-                            <input class="input_forms" type="text" id="nome" name="nome" placeholder="Até 100 caracteres">
+                            <input class="input_forms" type="text" id="nome" name="nome" placeholder="Até 100 caracteres"
+                            maxlength="100">
                         </div>
                         <div class="form_item">
                             <label class="label_forms" for="email">E-mail</label>
                             <input class="input_forms" type="text" id="email" name="email" placeholder="Formato: usuario@email.com" 
-                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                            maxlength="50" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                         </div>
                     </div>
                     <div class="assunto">
                         <label class="label_forms" for="assunto">Assunto</label>
-                        <input class="input_forms" type="text" id="assunto" name="assunto" placeholder="Até 100 caracteres">
+                        <input class="input_forms" type="text" id="assunto" name="assunto" placeholder="Até 100 caracteres"
+                        maxlength="100">
                     </div>
                     <div class="mensagem">
                         <label class="label_forms" for="mensagem">Mensagem</label>
-                        <textarea class="resize" type="text" id="mensagem" name="mensagem" placeholder="Até 2000 caracteres"></textarea>
+                        <textarea class="resize" type="text" id="mensagem" name="mensagem" placeholder="Até 2000 caracteres"
+                        maxlength="2000"></textarea>
+                        <p class="contador" id="contador">0/2000</p>
                     </div>
                     <div class="enviar_e_flash">
                         <input class="botao_enviar" type="submit" value="Enviar">

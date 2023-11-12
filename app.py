@@ -15,8 +15,8 @@ class formulario(db.Model):
     __tablename__ = "formulario"
     id = db.Column('mensagem_id', db.Integer, primary_key = True)
     nome = db.Column(db.String(100))
-    email = db.Column(db.String(50), unique = True)  
-    assunto = db.Column(db.String(200))
+    email = db.Column(db.String(50), unique = True)
+    assunto = db.Column(db.String(100))
     mensagem = db.Column(db.String(2000))
 
 def __init__(nome, email, assunto, mensagem):

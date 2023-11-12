@@ -33,6 +33,8 @@ window.onclick = function(event) {
 };
 
 
+
+
 /* Funcionalidade Menu Hamburguer */
 
 hamburguer = document.querySelector(".navbar_hamburguer");
@@ -43,7 +45,9 @@ hamburguer.onclick = function() {
   menu.style.display = "flex";
   menu.classList.toggle("showing");
 
-}
+};
+
+
 
 
 /* Deixar página ativa em azul no Navbar */
@@ -55,26 +59,51 @@ let nav_contato = document.getElementById("nav_contato");
 
 if (activePage == "/") {
   nav_home.classList.toggle("active");
-}
+};
 
 if (activePage == "/sobre") {
   nav_sobre.classList.toggle("active");
-}
+};
 
 if (activePage == "/contato") {
   nav_contato.classList.toggle("active");
-}
+};
 
 if (activePage == "/formulario_post") {
   nav_contato.classList.toggle("active");
-}
+};
 
 
-let flash = document.getElementById("flash")
+
+
+/* Contador de palavras do formulário */
+
+document.getElementById("mensagem").addEventListener("input", function() {
+
+  let contador = document.getElementById("contador");
+
+  escrito = mensagem.value.length;
+  contador.textContent = escrito + "/2000";
+
+  if (escrito >= 1500 && escrito < 1950) {
+    contador.style.color = "#eb9f13";
+  } else if (escrito >= 1950) {
+    contador.style.color = "#d4442a";
+  } else {
+    contador.style.color = "black";
+  }
+});
+
+
+
+
+/* Mudar estilo do flash pra sucesso */
+
+let flash = document.getElementById("flash");
 let flash_frase = document.getElementById("flash_mensagem").innerHTML;
-const flash_img = document.getElementById("flash_img")
+const flash_img = document.getElementById("flash_img");
 
 if (flash_frase == "Mensagem enviada com sucesso!") {
     flash.classList.add ("flash_verde");
     flash_img.src = "/static/img/flash_sucesso.png"
-}
+};

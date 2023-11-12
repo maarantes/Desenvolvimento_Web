@@ -913,6 +913,11 @@ footer {
     height: 200%;
 }
 
+.contador {
+    margin-top: 16px;
+    align-self: flex-end;
+}
+
 textarea {
     border: 1px solid #ababab;
     font-size: 1rem;
