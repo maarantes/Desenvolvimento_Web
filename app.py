@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import IntegrityError
 import mysql
 
 app = Flask("__name__")
@@ -55,10 +56,14 @@ def formulario_post():
             mensagem_form = formulario(nome=nome, email=email, assunto=assunto, mensagem=mensagem)
          
             db.session.add(mensagem_form)
-            db.session.commit()
-            flash('Mensagem enviada com sucesso!')
+            try:
+                db.session.commit()
+                flash('Mensagem enviada com sucesso!')
+            except IntegrityError: # Se o e-mail já foi enviado antes,
+                db.session.rollback() # cancelará o envio das informações
+                flash('Este e-mail já está em uso!') # e avisará que o e-mail já está em uso
 
-    return redirect(url_for("contato")) #Pra rota "formulario_post" não aparecer no link do site e sim o "contato"
+    return redirect(url_for("contato")) # Pra rota "formulario_post" não aparecer no link do site e sim o "contato"
 
 
 
