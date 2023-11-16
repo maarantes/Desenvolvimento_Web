@@ -1020,3 +1020,77 @@ textarea:focus {
         font-size: 0.8rem;
     }
 }
+
+
+
+
+/* Página Admin */
+
+/* Senha */
+
+.senha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 128px;
+}
+
+.senha_parte_baixo {
+    display: flex;
+    flex-direction: row;
+}
+
+.senha input {
+    border: 1px solid #03045E;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.senha button {
+    background-color: #03045E;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.senha button:hover {
+    background-color: #020348;
+}
+
+/* Conteúdo */
+
+.card_mensagem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 32px;
+    background-color: #ededed;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.card_mensagem_esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 64px;
+}
+
+.card_mensagem input {
+    background-color: #d4442a;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card_mensagem input:hover {
+    background-color: #ae311b;
+}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Admin | Unes {% endblock %}
+
+    {% block content %}
+
+    <div class="conteudo" id="conteudo">
+        <h1>Painel de Administrador</h1>
+
+        <hr>
+
+        <h2>Mensagens Pendentes ({{ total_pendente }})</h2>
+
+        {% if mensagens %}
+            {% for mensagem in mensagens %}
+            <div class="card_mensagem">
+                <div class="card_mensagem_esquerda">
+                    <p><strong>Nome:</strong> {{ mensagem.nome }}</p>
+                    <p><strong>Email:</strong> {{ mensagem.email }}</p>
+                    <p><strong>Assunto:</strong> {{ mensagem.assunto }}</p>
+                    <p><strong>Mensagem:</strong> {{ mensagem.mensagem }}
+                </div>
+                <form action="{{ url_for('deletar_msg', id=mensagem.id) }}" method="POST">
+                    <input type="submit" value="Deletar">
+                </form>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="card_mensagem">
+                <p>Não há nenhuma mensagem pendente.</p>
+            </div>
+        {% endif %}
+        </div>
+
+    {% endblock %}

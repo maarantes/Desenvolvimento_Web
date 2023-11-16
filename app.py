@@ -65,6 +65,17 @@ def formulario_post():
 
     return redirect(url_for("contato")) # Pra rota "formulario_post" não aparecer no link do site e sim o "contato"
 
+@app.route("/admin")
+def admin():
+    mensagens = formulario.query.all()
+    return render_template("admin.html", mensagens=mensagens, total_pendente=len(mensagens))
+
+@app.route("/deletar_msg/<int:id>", methods=['POST'])
+def deletar_msg(id):
+    mensagem = formulario.query.get_or_404(id)
+    db.session.delete(mensagem)
+    db.session.commit()
+    return redirect(url_for('admin'))
 
 
 
